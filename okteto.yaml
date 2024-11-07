@@ -30,7 +30,7 @@ deploy:
       --member="serviceAccount:$gcpProject.svc.id.goog[${OKTETO_NAMESPACE}/$saName]"
 
   - name: Deploy the app
-    command: helm upgrade --install gcp-app gcp-app --set bucket="cloud-cred-demo-${OKTETO_NAMESPACE}" --set serviceAccountName="dev-env-${OKTETO_NAMESPACE}" --set gcpProject="arsh-358508"
+    command: helm upgrade --install gcp-app gcp-app --set bucket="cloud-cred-demo-${OKTETO_NAMESPACE}" --set serviceAccountName="dev-env-${OKTETO_NAMESPACE}" --set gcpProject="arsh-358508" --set image=${OKTETO_BUILD_SERVER_IMAGE}
 
 destroy:
   image: gcr.io/google.com/cloudsdktool/google-cloud-cli:stable
