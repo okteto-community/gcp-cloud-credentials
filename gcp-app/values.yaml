@@ -1,3 +1,5 @@
 replicaCount: 1
-image: "rinkiyakedad/gcp-demo"
+image: "rinkiyakedad/gcp-demo-cluster"
+serviceAccountName: web
+gcpProject:
 bucket: 
