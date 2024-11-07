@@ -56,4 +56,4 @@ dev:
   server:
     command: bash
     sync:
-      - server:/app
+      - .:/app
