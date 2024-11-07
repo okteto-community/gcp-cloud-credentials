@@ -51,3 +51,9 @@ destroy:
       saName="dev-env-${OKTETO_NAMESPACE}"
       gcpProject="arsh-358508"
       gcloud iam service-accounts delete $saName@$gcpProject.iam.gserviceaccount.com -q || echo "Service account not found, skipping deletion."
+
+dev:
+  server:
+    command: bash
+    sync:
+      - server:/app
